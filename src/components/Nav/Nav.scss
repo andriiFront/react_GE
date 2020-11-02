@@ -1,0 +1,133 @@
+@import "../../styles/vars";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  height: 100%;
+  
+  &__input {
+    display: none;
+    font-size: 18px;
+  }
+    
+  &__label {
+    display: none;
+    font-size: 18px;
+  
+    @media screen and (max-width: 993px) {
+      & {
+        display: flex;
+        align-items: center;
+        width: 10px;
+        cursor: pointer;
+        color: $c-gray;
+        font-size: 33px;
+        padding-right: 0;
+        margin-left: 22px;
+      }
+    }
+      
+  }
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+
+    @media screen and (max-width: 993px) {
+      & {
+        width: 25%;
+        position: absolute;
+        border-left: 1px solid $c-menu;
+        right: -25px;
+        top: 80px;
+        display: none;
+        box-sizing: border-box;
+        flex-direction: column;
+        font-size: 22px;
+      }
+
+      &-shown {
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      & {
+        width: 250px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+  
+  &__item {
+    margin-left: 31px;
+  
+    @media screen and (max-width: 993px) {
+      & {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+    
+  &__link {
+    display: inline-block;
+    font-family: poppins, roboto, sans-serif;
+    padding: 14px 0 15px;
+    transition: color 0.3s;
+    font-size: 16px;
+    color: $c-gray;
+    text-transform: capitalize;
+  
+    &:hover {
+      color: $c-yellow;
+    }
+  
+    @media screen and (max-width: 993px) {
+      & {
+        display: grid;
+        width: 100%;
+        justify-items: flex-start;
+        grid-template-columns: 30px auto 10px;
+        grid-gap: 5px;
+        align-items: baseline;
+        border-bottom: 1px solid #000;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      & {
+        padding: 10px 30px;
+      }
+    }
+  }
+       
+  &__icon.fas {
+    display: none;
+  
+    @media screen and (max-width: 993px) {
+      & {
+        display: inline;
+        color: $c-gray;
+      }
+    }
+  }
+  
+  &__icon-times.fas {
+  
+    @media screen and (max-width: 993px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}
